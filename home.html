@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
   <head>
     <title>Three Pointer League</title>
@@ -17,6 +17,7 @@
 
     <!-- Custom styling -->
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
   </head>
     
@@ -26,23 +27,24 @@
       <div class="header">
         <div class="header-text">
           <h1><strong>Three Pointer League</strong></h1>
+          <p id="user-note"></p>
         </div>
       </div>
+      <div class="mobile-nav-button">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
+        <ul id="nav" class="nav navbar-nav">
           <li><a><strong>Home</strong></a></li>
           <li><a href="picks.html">Full Picks</a></li>
           <li><a href="stats.html">Statistics</a></li>
           <li><a href="earnings.html">Earnings</a></li>
           <li><a href="rules.html">Rules</a></li>
           <li><a href="history.html">History</a></li>
+          <li><a href="javascript:void(0);" onclick="logout()">Logout</a></li>
         </ul>
-      </div>
-      <div class="nav-button">
-        <div class="user-info">
-          <p id="user-note"></p>
-        </div>
-        <button onclick="logout()">Logout</button> 
       </div>
     </nav>
 
@@ -55,11 +57,11 @@
     <section id="todays-picks" class="todays-picks-section">
       <h1>Today's Questions</h1>
       <div id="yet-to-pick">
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbwYtM89FgVI9aL2qYE4d57mGlDzMdqYOeQ_SM_DFnz0UGGyTJ412yb-61ZAqwxhIS9q/exec" id="picks-form">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbyhjAW9EnpQw5ps77CVLW_XSDTXFFP7uTB4bKqYbD9R1vcdL806bUw6GYvKgIxfVYpDVw/exec" id="picks-form">
           
           <h3>QUESTION 1:</h3>
           <div class="question-box">
-            <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTv2dMbpe5qmgTRDVUfu1Cm__klUpuEJKnTdSpfKTPQ8imjgbo4VfAU2R36vhNlXNKufpJrdYFHtva6/pubhtml?gid=1851289190&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=1851289190&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
           </div>
           <br>
           <input type="radio" id="q1_yes" name="Q1" value="yes">
@@ -71,7 +73,7 @@
               
           <h3>QUESTION 2:</h3>
           <div class="question-box">
-            <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTv2dMbpe5qmgTRDVUfu1Cm__klUpuEJKnTdSpfKTPQ8imjgbo4VfAU2R36vhNlXNKufpJrdYFHtva6/pubhtml?gid=1940429751&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=1940429751&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
           </div>
           <br>
           <input type="radio" id="yes" name="Q2" value="yes">
@@ -83,7 +85,7 @@
           
           <h3>QUESTION 3:</h3>
           <div class="question-box">
-            <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTv2dMbpe5qmgTRDVUfu1Cm__klUpuEJKnTdSpfKTPQ8imjgbo4VfAU2R36vhNlXNKufpJrdYFHtva6/pubhtml?gid=1168976608&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=1168976608&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
           </div>
           <br>
           <input type="radio" id="yes" name="Q3" value="yes">
@@ -101,7 +103,7 @@
         <p id="completed_q1_pick"></p>
         <p id="completed_q2_pick"></p>
         <p id="completed_q3_pick"></p>
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbwYtM89FgVI9aL2qYE4d57mGlDzMdqYOeQ_SM_DFnz0UGGyTJ412yb-61ZAqwxhIS9q/exec" id="clear-form">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbyhjAW9EnpQw5ps77CVLW_XSDTXFFP7uTB4bKqYbD9R1vcdL806bUw6GYvKgIxfVYpDVw/exec" id="clear-form">
           <input type="submit" name="clear" value="Clear My Picks and Resubmit">
         </form>
       </div>
@@ -111,7 +113,7 @@
     <!-- Scoreboard Section -->
     <section id="scores-section" class="scores-section">
       <h1>This Week's Scores</h1>
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTv2dMbpe5qmgTRDVUfu1Cm__klUpuEJKnTdSpfKTPQ8imjgbo4VfAU2R36vhNlXNKufpJrdYFHtva6/pubhtml?gid=286867334&amp;single=true&amp;widget=true&amp;headers=false" scrolling="no"></iframe>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=286867334&amp;single=true&amp;widget=true&amp;headers=false" scrolling="no"></iframe>
     </section>
          
   </body>
@@ -216,4 +218,13 @@
     });
 </script>
 
-
+<script>
+    function myFunction() {
+        var x = document.getElementById("nav");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>

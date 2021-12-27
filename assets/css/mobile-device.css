@@ -14,69 +14,84 @@ body {
   background-color: #FFF;
 }
 
+/* Style the navigation menu */
 .navbar {
-    background-color: #3b674b;
-	color: #fff;
-    padding: 25px 40px;
-    width: 100%;
-    height: auto;
-    position: relative;
+  overflow: hidden;
+  background-color: #aaa; /*#3b674b;*/
+  color: #fff;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.navbar .navbar-collapse {
+  display: none;
+}
+
+/* Style navigation menu links */
+.navbar a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.navbar a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
 .header {
     height: 70px;
-    width: 100%;
     text-align: center;
-    padding: 0 0 90px 0;
 }
 
-.navbar-collapse {
-    float: left;
+.nav-button {
+  text-align: right;
+  justify-content: flex-end;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  margin: auto;
 }
 
-.navbar-nav > li > a {
+.nav-button > .user-info {
+  text-align: right;
+  height: 50px;
+  padding: 0 20px 0 0;
+}
+
+.nav-button > .user-info > p{
   color: #fff;
   font-size: 18px;
   font-weight: 400;
+  line-height: 50px; 
+  vertical-align: middle;
 }
 
-.mobile-nav-button {
-    display: none;
+.nav-button > button {
+  background-color: #3b674b; 
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+  vertical-align: middle;
 }
 
-@media (max-width: 766px) {
-    
-    .navbar {
-        background-color: #3b674b;
-	    color: #fff;
-        padding: 25px 40px;
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .navbar-collapse {
-        display: flex;
-        flex-direction: column;
-        float: none;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar-nav > li > a {
-        color: #000;
-        font-size: 18px;
-        font-weight: 400;
-        text-align: center;
-    }
-    
-    .mobile-nav-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+.navbar-header > a {
+    color: #fff;
+	font-size: 25px;
+	font-weight: 600;
 }
 
 /* LOGIN Specific */ 
@@ -116,7 +131,7 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 50px 0 0 0;
+    padding: 250px 0 0 0;
 }
 
 .todays-picks-section {
@@ -153,6 +168,10 @@ body {
     margin-left: -4px; /* Cut off left bar */
 }
 
+#top-bar{
+    display: none;
+}
+
 .scores-section iframe{
     width: 736px;
     height: 100%;
@@ -161,10 +180,6 @@ body {
 .todays-picks-section > h1{
     padding: 0 0 10px 0;
     text-decoration: underline;
-}
-
-@media (max-width: 800px) {
-    
 }
 
 /* FULL PICKS Specific */ 
