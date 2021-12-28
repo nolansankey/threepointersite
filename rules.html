@@ -17,33 +17,25 @@
 
     <!-- Custom styling -->
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="assets/css/mobile-device.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
   </head>
     
   <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
   <body id="page-top" data-spy="scroll" data-target=".navbar fixed-top">
     <nav class="navbar navbar-fixed-top" role="navigation">
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="home.html">Home</a>
-          <li><a href="picks.html">Full Picks</a></li>
-          <li><a href="stats.html">Statistics</a></li>
-          <li><a href="earnings.html">Earnings</a></li>
-          <li><strong>Rules</strong></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </div>
-    </nav>
-      
-    <nav class="navbar navbar-fixed-top" role="navigation">
       <div class="header">
         <div class="header-text">
           <h1><strong>Three Pointer League</strong></h1>
+          <p id="user-note"></p>
         </div>
       </div>
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <div class="mobile-nav-button">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div id="nav" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
           <li><a href="home.html">Home</a>
           <li><a href="picks.html">Full Picks</a></li>
@@ -51,13 +43,8 @@
           <li><a href="earnings.html">Earnings</a></li>
           <li><a><strong>Rules</strong></a></li>
           <li><a href="history.html">History</a></li>
+          <li><a href="javascript:void(0);" onclick="logout()">Logout</a></li>
         </ul>
-      </div>
-      <div class="nav-button">
-        <div class="user-info">
-          <p id="user-note"></p>
-        </div>
-        <button onclick="logout()">Logout</button> 
       </div>
     </nav>
     
@@ -86,3 +73,18 @@
         window.location.replace("index.html");
     }
 </script>
+    
+<script>
+    if (window.innerWidth < 766) {
+        document.getElementById("nav").style.display = "none";
+    }
+    function myFunction() {
+        var x = document.getElementById("nav");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+    

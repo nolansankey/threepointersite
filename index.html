@@ -17,7 +17,7 @@
 
     <!-- Custom styling -->
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="assets/css/mobile-device.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
   </head>
     
@@ -27,23 +27,24 @@
       <div class="header">
         <div class="header-text">
           <h1><strong>Three Pointer League</strong></h1>
+          <p id="user-note"></p>
         </div>
       </div>
+      <div class="mobile-nav-button">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
+        <ul id="nav" class="nav navbar-nav">
           <li><a href="home.html">Home</a></li>
           <li><a href="picks.html">Full Picks</a></li>
           <li><a href="stats.html">Statistics</a></li>
           <li><a href="earnings.html">Earnings</a></li>
           <li><a href="rules.html">Rules</a></li>
           <li><a href="history.html">History</a></li>
+          <li><a href="javascript:void(0);" onclick="logout()">Logout</a></li>
         </ul>
-      </div>
-      <div class="nav-button">
-        <div class="user-info">
-          <p id="user-note"></p>
-        </div>
-        <button onclick="logout()">Logout</button> 
       </div>
     </nav>
     
@@ -78,10 +79,9 @@
           <p>This season comes with a fresh new look, but its the same game as always.</p>
           <p><strong>How to play: </strong>Each day I will post 3 questions about that day's sporting events (ex. Will the Golden State Warriors score 112 or more points against the L.A. Lakers? Will the Colorado Avalanche and New York Rangers combing for 6 or more goals? Will the Green Bay Packers beat the Tampa Bay Buccaneers?). You earn one point for each question you get right and if you nail all three you make a <i>Three Pointer</i> and earn an extra three points for a total of six. The player(s) with the most points at the end of the week get paid out and there are also season long prizes.</p>  
           <p><strong>New this season: </strong></p>
-          <ul>
-            <li><i>This website(!!!):</i> Three pointer has a new home. This website should make picking and viewing scores simpler as they are all in one place. The site does require a personalized login, but if you keep your browser open on the page, you shouldn't have to log in again. Since this is new, there will obviously be bugs. Let me know if you find any or have any suggestions!</li>
-            <li><i>Season 8 - The Ocho:</i> Given that we've made it to season 8, it's only right to do something fun! This season will feature scattered obscure sporting events to keep you on your toes. The question is whether it is worth reserching or just going with your gut...</li>  
-          </ul>
+          <p><i>This website(!!!):</i> Three pointer has a new home! This website should make picking and viewing scores simpler as they are all in one place. The site does require a personalized login, but if you keep your browser open on the page, you shouldn't have to log in again. Since this is new, there will obviously be bugs. Let me know if you find any or have any suggestions!</p>
+          <p>-</p>
+          <p><i>Season 8 - The Ocho:</i> Given that we've made it to season 8, it's only right to do something fun! This season will feature scattered obscure sporting events to keep you on your toes. The question is whether it is worth reserching or just going with your gut...</p>  
           <p><strong>Buy-in and payouts: </strong>TBD</p>
           <p><strong>Invite Policy: </strong>TBD</p>
           <p><strong>Registration Deadline: </strong>TBD</p>
@@ -203,4 +203,18 @@
             })
         });
     });
+</script>
+
+<script>
+    if (window.innerWidth < 766) {
+        document.getElementById("nav").style.display = "none";
+    }
+    function myFunction() {
+        var x = document.getElementById("nav");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
 </script>

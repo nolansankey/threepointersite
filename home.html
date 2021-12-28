@@ -4,7 +4,7 @@
     <title>Three Pointer League</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
     
     <!-- Keywords used in the website -->
     <meta name="keywords" content="Three Pointer League, Three Pointer, Nolan Sankey">
@@ -99,10 +99,32 @@
         </form>
       </div>
       <div id="already-picked">
-        <h3>Your Submission</h3>
+        <h3>QUESTION 1:</h3>
+        <div class="question-box">
+          <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=1851289190&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
+        <br>
         <p id="completed_q1_pick"></p>
+        <br>
+        <br>
+              
+        <h3>QUESTION 2:</h3>
+        <div class="question-box">
+          <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=1940429751&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
+        <br>
         <p id="completed_q2_pick"></p>
+        <br>
+        <br>
+         
+        <h3>QUESTION 3:</h3>
+        <div class="question-box">
+          <iframe class="question-embedded" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_DqFFFE92WV--_W5u9igPEF7tndsOfDfC5N2dZrrKFTjiqLk0mnkDasC4Uh7edYfo4yp99S_3HfUA/pubhtml?gid=1168976608&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
+        <br>
         <p id="completed_q3_pick"></p>
+        <br>
+        <br>
         <form method="POST" action="https://script.google.com/macros/s/AKfycbyhjAW9EnpQw5ps77CVLW_XSDTXFFP7uTB4bKqYbD9R1vcdL806bUw6GYvKgIxfVYpDVw/exec" id="clear-form">
           <input type="submit" name="clear" value="Clear My Picks and Resubmit">
         </form>
@@ -135,9 +157,9 @@
     var q1_pick = localStorage.getItem("Q1 "+today);
     var q2_pick = localStorage.getItem("Q2 "+today);
     var q3_pick = localStorage.getItem("Q3 "+today);
-    document.getElementById("completed_q1_pick").innerHTML = "QUESTION 1: "+q1_pick;
-    document.getElementById("completed_q2_pick").innerHTML = "QUESTION 2: "+q2_pick;
-    document.getElementById("completed_q3_pick").innerHTML = "QUESTION 3: "+q3_pick;
+    document.getElementById("completed_q1_pick").innerHTML = "Your Pick: "+q1_pick;
+    document.getElementById("completed_q2_pick").innerHTML = "Your Pick: "+q2_pick;
+    document.getElementById("completed_q3_pick").innerHTML = "Your Pick: "+q3_pick;
     if(!is_logged_in){
         window.location.replace("index.html");
     }
@@ -219,6 +241,9 @@
 </script>
 
 <script>
+    if (window.innerWidth < 766) {
+        document.getElementById("nav").style.display = "none";
+    }
     function myFunction() {
         var x = document.getElementById("nav");
         if (x.style.display === "block") {
