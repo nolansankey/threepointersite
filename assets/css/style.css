@@ -41,6 +41,7 @@ body {
 }
 
 .mobile-nav-button {
+    color: #fff;
     display: none;
     height: 20px;
 }
@@ -150,7 +151,7 @@ body {
 
 .question-box {
     height: 96px;
-    width: 399px;
+    width: 200px;
     overflow: hidden; /* Makes cutoff work */
     border: 0px solid black; /* Just for aesthetics, can be removed */
     display: inline-block; /* Fit div to contents */
@@ -158,8 +159,8 @@ body {
 
 .question-embedded {
     height: 400px;
-    width: 430px;
-    margin-top: -32px; /* Cut off top bar */
+    width: 200px;
+    margin-top: -48px; /* Cut off top bar */
     margin-left: -4px; /* Cut off left bar */
 }
 
