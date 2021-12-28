@@ -175,7 +175,7 @@ body {
 
 @media (max-width: 766px) {
     .question-box {
-        height: 60px;
+        height: 70px;
         width: 100%;
         overflow: hidden; /* Makes cutoff work */
         border: 0px solid black; /* Just for aesthetics, can be removed */
@@ -184,9 +184,8 @@ body {
 
     .question-embedded {
         height: 300px;
-        width: 120%;
-        margin-left: -15px; /* Cut off left bar */
-        margin-right: -15px;/* Cut off left bar */
+        width: 68%;
+        margin-top: -60px;
     }
     
     .scores-section iframe{
@@ -224,7 +223,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px 0 0 0;
-    height: 1040px;
+    height: 890px;
 }
 
 .weeks-picks-section iframe{
