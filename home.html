@@ -95,7 +95,7 @@
           <input type="radio" id="q3_opt-out" name="Q3" value="opt out">
           <label for="q3_opt-out">OPT OUT</label><br><br>
           
-          <input type="submit" value="Submit">
+          <input type="submit" id="pick-submit" value="Submit">
         </form>
       </div>
       <div id="already-picked">
@@ -126,7 +126,7 @@
         <br>
         <br>
         <form method="POST" action="https://script.google.com/macros/s/AKfycbyhjAW9EnpQw5ps77CVLW_XSDTXFFP7uTB4bKqYbD9R1vcdL806bUw6GYvKgIxfVYpDVw/exec" id="clear-form">
-          <input type="submit" name="clear" value="Clear My Picks and Resubmit">
+          <input type="submit" id="clear-pick-submit" name="clear" value="Clear My Picks and Resubmit">
         </form>
       </div>
     </section>
@@ -186,6 +186,7 @@
         var p_form = document.getElementById('picks-form');
         p_form.addEventListener("submit", function(e) {
             e.preventDefault();
+            document.getElementById("pick-submit").disabled=true;
             const data = new FormData(p_form);
             var currentdate = new Date(); 
             var timestamp = Math.floor(new Date().getTime() / 1000);
@@ -218,6 +219,7 @@
         var clear_form = document.getElementById('clear-form');
         clear_form.addEventListener("submit", function(e) {
             e.preventDefault();
+            document.getElementById("clear-pick-submit").disabled=true;
             const data = new FormData(clear_form);
             data.append("Name", curr_user);
             data.append("Clear", true);

@@ -63,7 +63,7 @@
           </div> 
           <div class="field password-entry">
             <label>Password: <input type="text" id="password-typed" name="password-typed" class="input-box" required /></label><br>
-            <input type="submit" value="Submit"><br>
+            <input type="submit" id="login-submit" value="Submit"><br>
           </div>
         </form>
       </div>
@@ -93,15 +93,14 @@
           <label>Name: <br><input type="text" name="Name" required /></label><br>
           <label>Google Drive Email Address: <br><input type="text" name="Email" required /></label><br>
           <label>Venmo Username: <br><input type="text" name="Venmo" required /></label><br>
-          <label>If you are a new player and someone other than Nolan invited you, put their name here: <br><input type="text" name="Invite" required /></label><br>
+          <label>If you are a new player and someone other than Nolan invited you, put their name here: <br><input type="text" placeholder="no" name="Invite" required /></label><br>
           <p><strong>NEW:</strong> <i>you will need a password to log into the site to submit and view your picks. It can be litterally anything. 1 or more letter(s).</i></p>
           <label>Password: <br><input type="text" name="Password" required /></label><br>
-          <input type="submit" value="Submit">
+          <input type="submit" id="register-submit" value="Submit">
           <p id="submit-confirm"></p>
         </form>
-        <p id="test1"></p>
-        <p id="test2"></p>
-        <p id="test3"></p>
+        <br>
+        <p><i>NOTE: you will NOT be able to log-in until I approve you and add you as a user.</i></p>
       </div>
     </section>
       
@@ -156,6 +155,7 @@
         var login_form = document.getElementById('login-form');
         login_form.addEventListener("submit", function(e) {
             e.preventDefault();
+            document.getElementById("login-submit").disabled=true;
             const data = new FormData(login_form);
             entered_un = data.get("login-name-select");
             entered_pw = data.get("password-typed");
@@ -189,6 +189,7 @@
         var reg_form = document.getElementById('register-form');
         reg_form.addEventListener("submit", function(e) {
             e.preventDefault();
+            document.getElementById("register-submit").disabled=true;
             const data = new FormData(reg_form);
             const action = e.target.action;
             fetch(action, {

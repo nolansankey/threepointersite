@@ -119,6 +119,10 @@ body {
     padding: 50px 5% 50px 5%;
 }
 
+.register-section input {
+    text-align: center;
+}
+
 /* HOME Specific */ 
 
 .welcome-section {
