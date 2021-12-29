@@ -155,11 +155,9 @@
         var login_form = document.getElementById('login-form');
         login_form.addEventListener("submit", function(e) {
             e.preventDefault();
-            document.getElementById("login-submit").disabled=true;
             const data = new FormData(login_form);
             entered_un = data.get("login-name-select");
             entered_pw = data.get("password-typed");
-            document.getElementById("test1").innerHTML = entered_un;
             searchPwTable(entered_un, entered_pw);
         });
     });
