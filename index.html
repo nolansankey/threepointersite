@@ -67,6 +67,10 @@
           </div>
         </form>
       </div>
+      <br>
+      <p><a href="javascript:void(0);" onclick="forgotPW()"><i>Forgot Password</i></a></p>
+      <p id="forgot-pw-message">You Fool! Text Nolan and he can help you log in or reset your password.</p>
+      <br>
       <h1>OR</h1><br>
     </section>
       
@@ -113,16 +117,76 @@
           <th>Password</th>
         </tr>
         <tr>
+          <td>Alexander Coffey</td>
+          <td>soccerski16</td>
+        </tr>
+        <tr>
+          <td>Andrew Hunt</td>
+          <td>scrabla</td>
+        </tr>
+        <tr>
+          <td>Ben DiMaio</td>
+          <td>Password</td>
+        </tr>
+        <tr>
+          <td>Bryan V</td>
+          <td>DaddyBurrow</td>
+        </tr>
+        <tr>
+          <td>Gracie Briggs</td>
+          <td>iloveriver</td>
+        </tr>
+        <tr>
+          <td>Jack Vasu</td>
+          <td>jackvasu</td>
+        </tr>
+        <tr>
+          <td>Jacob Taulman</td>
+          <td>Javier2017</td>
+        </tr>
+        <tr>
+          <td>Jasper Meyer</td>
+          <td>tp</td>
+        </tr>
+        <tr>
+          <td>Joseph Klein</td>
+          <td>Me8Pasta</td>
+        </tr>
+        <tr>
+          <td>Justin Baker</td>
+          <td>C@ptain17</td>
+        </tr>
+        <tr>
+          <td>Kennedy Higgs</td>
+          <td>ken</td>
+        </tr>
+        <tr>
+          <td>Liam Hahn</td>
+          <td>Picks</td>
+        </tr>
+        <tr>
+          <td>Nolan Sankey</td>
+          <td>Commish</td>
+        </tr>
+        <tr>
+          <td>Peter Wharton</td>
+          <td>Ellieisagooddog</td>
+        </tr>
+        <tr>
+          <td>River Fox-Welch</td>
+          <td>NolanLovesDeezNuts</td>
+        </tr>
+        <tr>
+          <td>Tiger Bjornlund</td>
+          <td>tr!ple3</td>
+        </tr>
+        <tr>
           <td>Test Person</td>
           <td>Test</td>
         </tr>
         <tr>
           <td>Admin</td>
           <td>GiveMeTheAdminPower</td>
-        </tr>
-        <tr>
-          <td>Other Test Person</td>
-          <td>Test2</td>
         </tr>
       </table>
     </section>
@@ -147,6 +211,18 @@
     var curr_user = localStorage.getItem("user");
     if(curr_user!="Admin"){
         document.getElementById('password-table').style.display = 'none';
+    }
+</script>
+
+<script>
+    document.getElementById("forgot-pw-message").style.display = "none";
+    function forgotPW() {
+        var x = document.getElementById("forgot-pw-message");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
     }
 </script>
 

@@ -51,6 +51,8 @@
     <!-- Welcome Section -->
     <section id="welcome" class="welcome-section">
         <h1 id="user-intro"></h1>
+        <br>
+        <h3 id="pick-status"></h3>
     </section>
         
     <!-- Todays Picks Section -->
@@ -172,10 +174,12 @@
 <script>
     has_picked = localStorage.getItem("picked "+today);
     if(has_picked=="true") {
+        document.getElementById("pick-status").innerHTML = "Your picks today are submitted";
         document.getElementById('yet-to-pick').style.display = 'none'; 
         document.getElementById('already-picked').style.display = 'block'; 
     }
     else {
+        document.getElementById("pick-status").innerHTML = "You have yet to pick today";
         document.getElementById('yet-to-pick').style.display = 'block'; 
         document.getElementById('already-picked').style.display = 'none'; 
     }
