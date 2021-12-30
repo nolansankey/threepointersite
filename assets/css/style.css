@@ -431,7 +431,7 @@ body {
 
 /* HISTORY Specific */ 
 
-.history-section {
+.records-section {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -439,5 +439,63 @@ body {
     padding: 50px 5% 0 5%;
 }
 
+.week-winners-section {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 50px 5% 0 5%;
+}
+
+.losers-section {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 50px 5% 0 5%;
+}
+
+.season-prizes-section {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 50px 5% 0 5%;
+}
+
+/* Center tables for demo */
+
+table {
+  margin: 0 auto;
+}
+
+/* Default Table Style */
+
+table {
+  color: #333;
+  background: white;
+  border: 1px solid grey;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+
+table thead th,
+table tfoot th {
+  color: #777;
+  background: rgba(0,0,0,.1);
+}
+
+table caption {
+  padding:.5em;
+}
+
+table th, table td {
+  padding: .5em;
+  border: 1px solid lightgrey;
+}
+
+.losers-section{
+    padding-bottom: 50px;
+}
 
 /* TEMPLATES */
